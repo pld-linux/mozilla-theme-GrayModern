@@ -1,12 +1,10 @@
-Summary:		Like Modern, only gray
+Summary:	Like Modern, only gray
 Summary(pl):	Identyczny jak Modern, tylko ¿e szary
 Name:		mozilla-theme-GrayModern
 %define		_realversion 2003-08-28
 Version:	%(echo %{_realversion}|tr -d - )
 %define		_realname	graymodern
-%define		_mozrel		1.5
 %define		_mozdestrel	1.5b
-%define 		_nextmozrel	1.6
 %define		_snap		%{_realversion}_%{_mozdestrel}
 Release:	1
 License:	GPL
@@ -16,7 +14,7 @@ Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}_%{_snap}.jar
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/graymodern.html
 Requires(post,postun):	textutils
-Requires:	mozilla = 5:%{_mozrel}
+Requires:	mozilla = 5:1.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
