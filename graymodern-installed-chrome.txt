@@ -1,6 +1,0 @@
-skin,install,url,jar:resource:/chrome/graymodern.jar!/
-skin,install,url,jar:resource:/chrome/graymodern.jar!/global/
-skin,install,url,jar:resource:/chrome/graymodern.jar!/communicator/
-skin,install,url,jar:resource:/chrome/graymodern.jar!/editor/
-skin,install,url,jar:resource:/chrome/graymodern.jar!/messenger/
-skin,install,url,jar:resource:/chrome/graymodern.jar!/navigator/
