@@ -1,5 +1,5 @@
-Summary:	Like Modern, only gray.
-Summary(pl):	Identyczny jak Modern, tylko ¿e szary.
+Summary:	Like Modern, only gray
+Summary(pl):	Identyczny jak Modern, tylko ¿e szary
 Name:		mozilla-theme-GrayModern
 Version:	1.0.2
 %define		_realname	graymodern
@@ -28,6 +28,7 @@ Identyczny jak Modern, tylko ¿e szary.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
+
 install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
 install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
