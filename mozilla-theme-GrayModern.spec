@@ -7,8 +7,8 @@ Version:	1.0.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.mozdev.org/themes/%{_realname}_%{_snap}.jar
-# Source0-md5:	2888ad337bb2e680caa6b2068305a9c1
+Source0:	http://downloads.us-east1.mozdev.org/themes/%{_realname}_%{_snap}.jar
+# Source0-md5:	8ab4f2abb0046d66525b7659f5a18eb0
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/skins/graymodern.html
 Requires(post,postun):	textutils
