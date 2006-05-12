@@ -1,30 +1,29 @@
-Summary:	Like Modern, only gray
-Summary(pl):	Identyczny jak Modern, tylko ¿e szary
+Summary:	Theme like Modern, only gray
+Summary(pl):	Motyw identyczny jak Modern, tylko ¿e szary
 Name:		mozilla-theme-GrayModern
-%define		_realversion 2003-08-28
-Version:	%(echo %{_realversion}|tr -d - )
 %define		_realname	graymodern
-%define		_mozdestrel	1.5b
-%define		_snap		%{_realversion}_%{_mozdestrel}
+Version:	2004.09.15
+%define		_snap		2004-09-15_1.7
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}_%{_snap}.jar
-# Source0-md5:	a29d1da4482d2315123e495fdaf5efdb
+Source0:	http://mozilla-themes.schellen.net/%{_realname}_%{_snap}.jar
+# Source0-md5:	688d397dbbd308813c338471f13eb342
 Source1:	%{_realname}-installed-chrome.txt
-URL:		http://themes.mozdev.org/themes/graymodern.html
+URL:		http://mozilla-themes.schellen.net/
+Requires(post,postun):	mozilla >= 5:1.7.3-3
 Requires(post,postun):	textutils
-Requires:	mozilla = 5:1.5
+Requires:	mozilla >= 5:1.7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_chromedir	%{_libdir}/mozilla/chrome
+%define		_chromedir	%{_datadir}/mozilla/chrome
 
 %description
-Like Modern, only gray.
+Theme for Mozilla, like Modern only gray.
 
 %description -l pl
-Identyczny jak Modern, tylko ¿e szary.
+Motyw dla Mozilli, identyczny jak Modern, tylko ¿e szary.
 
 %prep
 
@@ -39,12 +38,10 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-umask 022
-cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+%{_sbindir}/mozilla-chrome+xpcom-generate
 
 %postun
-umask 022
-cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+%{_sbindir}/mozilla-chrome+xpcom-generate
 
 %files
 %defattr(644,root,root,755)
