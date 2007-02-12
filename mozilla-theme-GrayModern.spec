@@ -1,5 +1,5 @@
 Summary:	Theme like Modern, only gray
-Summary(pl):	Motyw identyczny jak Modern, tylko ¿e szary
+Summary(pl.UTF-8):   Motyw identyczny jak Modern, tylko Å¼e szary
 Name:		mozilla-theme-GrayModern
 %define		_realname	graymodern
 Version:	2004.09.15
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Theme for Mozilla, like Modern only gray.
 
-%description -l pl
-Motyw dla Mozilli, identyczny jak Modern, tylko ¿e szary.
+%description -l pl.UTF-8
+Motyw dla Mozilli, identyczny jak Modern, tylko Å¼e szary.
 
 %prep
 
