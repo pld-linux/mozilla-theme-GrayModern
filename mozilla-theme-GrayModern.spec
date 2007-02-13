@@ -1,5 +1,5 @@
 Summary:	Theme like Modern, only gray
-Summary(pl.UTF-8):   Motyw identyczny jak Modern, tylko że szary
+Summary(pl.UTF-8):	Motyw identyczny jak Modern, tylko że szary
 Name:		mozilla-theme-GrayModern
 %define		_realname	graymodern
 Version:	2004.09.15
